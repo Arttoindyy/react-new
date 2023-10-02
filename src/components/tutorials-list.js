@@ -107,8 +107,9 @@ export default class TutorialsList extends Component {
           <h4>Tutorials List</h4>
 
           <ul className='list-group'>
-            <li>1</li>
-            <li>2</li>
+            {tutorials && tutorials.map((tutorial, index) => (
+              <li>{tutorial.title}</li>
+            ))}
           </ul>
           <button className='btn btn-sm btn-danger m-3'
             onClick={this.removeAllTutorials}
